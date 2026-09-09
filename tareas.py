@@ -20,15 +20,19 @@ def eliminar_tarea():
         eliminada = tareas.pop(num - 1)
         print(f"🗑️ Tarea '{eliminada}' eliminada.")
 
+def contar_tareas():
+    print(f"\n🔢 Tienes {len(tareas)} tarea(s) pendiente(s).")
+
 while True:
     print("\n--- GESTOR DE TAREAS ---")
     print("1. Ver tareas")
     print("2. Añadir tarea")
     print("3. Eliminar tarea")
     print("4. Salir")
-    
+    print("5. Contar tareas")
+
     opcion = input("\nElige una opción: ")
-    
+
     if opcion == "1":
         mostrar_tareas()
     elif opcion == "2":
@@ -38,5 +42,7 @@ while True:
     elif opcion == "4":
         print("¡Hasta luego Pablo! 👋")
         break
+    elif opcion == "5":
+        contar_tareas()
     else:
         print("❌ Opción no válida.")
